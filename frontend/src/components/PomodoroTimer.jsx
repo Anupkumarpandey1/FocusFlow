@@ -48,7 +48,7 @@ export default function PomodoroTimer({
         <audio
           ref={audioRef}
           loop
-          src={ambientSound === 'rain' ? 'https://actions.google.com/sounds/v1/weather/rain_on_roof.ogg' : 'https://actions.google.com/sounds/v1/crowds/cafe_restaurant.ogg'}
+          src={ambientSound === 'rain' ? 'https://ia800806.us.archive.org/15/items/RainSounds10HoursAndNightThunderRainstorm/Rain%20Sounds%2010%20Hours%20%26%20Night%20Thunder%20%26%20Rainstorm.mp3' : 'https://ia903102.us.archive.org/3/items/Free_Ambient_Cafe_Chatter_Sound_Effect/Free_Ambient_Cafe_Chatter_Sound_Effect.mp3'}
           style={{ display: 'none' }}
         />
       </div>

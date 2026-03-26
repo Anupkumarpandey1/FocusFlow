@@ -76,6 +76,31 @@ export default function Landing({ onStart }) {
             <p className="text-gray-400 text-sm">Block out noise and drop into the zone instantly with baked-in lofi sounds.</p>
           </div>
         </div>
+
+        {/* How It Works Section */}
+        <div className="mt-32 max-w-4xl mx-auto w-full text-center pb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">How FocusFlow Works</h2>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-focus/20 flex items-center justify-center text-focus font-bold text-xl mb-4 border border-focus/30">1</div>
+              <h4 className="text-lg font-semibold mb-2">Create Tasks</h4>
+              <p className="text-gray-400 text-sm max-w-xs">Quickly outline what you need to do and set priority levels.</p>
+            </div>
+            <div className="hidden md:block w-24 h-1 border-t-2 border-dashed border-gray-700 mt-[-40px]"></div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-focus/20 flex items-center justify-center text-focus font-bold text-xl mb-4 border border-focus/30">2</div>
+              <h4 className="text-lg font-semibold mb-2">Start Timer</h4>
+              <p className="text-gray-400 text-sm max-w-xs">Lock in with customizable Pomodoro blocks and lofi soundscapes.</p>
+            </div>
+            <div className="hidden md:block w-24 h-1 border-t-2 border-dashed border-gray-700 mt-[-40px]"></div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-focus/20 flex items-center justify-center text-focus font-bold text-xl mb-4 border border-focus/30">3</div>
+              <h4 className="text-lg font-semibold mb-2">Track Growth</h4>
+              <p className="text-gray-400 text-sm max-w-xs">Watch your streaks and daily focus hours grow effortlessly.</p>
+            </div>
+          </div>
+        </div>
+
       </main>
     </div>
   );
