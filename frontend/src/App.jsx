@@ -10,7 +10,10 @@ import PomodoroTimer from './components/PomodoroTimer';
 import TaskList from './components/TaskList';
 import StatsPanel from './components/StatsPanel';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+let API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+if (API_BASE.endsWith('/')) API_BASE = API_BASE.slice(0, -1);
+if (!API_BASE.endsWith('/api')) API_BASE = `${API_BASE}/api`;
+
 const API_URL = `${API_BASE}/tasks`;
 const STATS_URL = `${API_BASE}/sessions/stats`;
 const SESSION_URL = `${API_BASE}/sessions`;

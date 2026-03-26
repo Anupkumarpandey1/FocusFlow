@@ -23,7 +23,10 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, [token]);
 
-  const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+  let API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+  // Bulletproof against trailing slashes and missing /api from the user's Vercel config
+  if (API_BASE.endsWith('/')) API_BASE = API_BASE.slice(0, -1);
+  if (!API_BASE.endsWith('/api')) API_BASE = `${API_BASE}/api`;
 
   const login = async (email, password) => {
     const res = await axios.post(`${API_BASE}/users/login`, { email, password });
