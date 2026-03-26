@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 import axios from 'axios';
 import { AuthContext } from './context/AuthContext';
 import Login from './pages/Login';
+import Landing from './pages/Landing';
 
 // Cleanly extracted UI components
 import Sidebar from './components/Sidebar';
@@ -21,6 +22,7 @@ const SESSION_URL = `${API_BASE}/sessions`;
 function App() {
   const { user, logout, loading } = useContext(AuthContext);
   const [isRegisterMode, setIsRegisterMode] = useState(false);
+  const [showLanding, setShowLanding] = useState(true);
 
   // App State layer
   const [workDuration, setWorkDuration] = useState(() => Number(localStorage.getItem('focusWorkDuration')) || 25);
@@ -150,7 +152,8 @@ function App() {
 
   // Loading & Auth Gateways
   if (loading) return <div className="h-screen w-full bg-darker flex items-center justify-center text-white font-sans text-xl">Loading...</div>;
-  if (!user) return <Login isRegister={isRegisterMode} toggleMode={() => setIsRegisterMode(!isRegisterMode)} />;
+  if (!user && showLanding) return <Landing onStart={() => setShowLanding(false)} />;
+  if (!user && !showLanding) return <Login isRegister={isRegisterMode} toggleMode={() => setIsRegisterMode(!isRegisterMode)} />;
 
   // Display Render (Cleaned up!)
   return (
