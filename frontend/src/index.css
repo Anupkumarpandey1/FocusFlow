@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-focus: #3B82F6;
+  --color-dark: #121212;
+  --color-darker: #0A0A0A;
+  --color-card: #1E1E1E;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-darker);
+  color: #ffffff;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
