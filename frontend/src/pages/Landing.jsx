@@ -14,7 +14,7 @@ export default function Landing({ onStart }) {
           <CheckCircle className="w-8 h-8 text-focus" />
           <span className="text-2xl font-bold tracking-wider">FocusFlow</span>
         </div>
-        <button 
+        <button
           onClick={onStart}
           className="text-sm font-medium text-gray-300 hover:text-white transition-colors border border-gray-700 hover:border-gray-500 px-5 py-2 rounded-full"
         >
@@ -31,22 +31,22 @@ export default function Landing({ onStart }) {
           </span>
           The Ultimate Productivity SaaS
         </div>
-        
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 max-w-4xl text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
+
+        <h1 className="text-5xl p-10 md:text-7xl font-extrabold tracking-tight mb-8 max-w-4xl text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
           Master your time.<br /> Find your <span className="text-focus">Flow.</span>
         </h1>
-        
+
         <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
           A seamless Notion-inspired workspace paired with a powerful Pomodoro timer, ambient sound engine, and striking analytics. Totally free.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-5">
-          <button 
+          <button
             onClick={onStart}
             className="group bg-focus hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] flex items-center justify-center gap-3"
           >
             Start Focusing Now
-            <Play className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor"/>
+            <Play className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" />
           </button>
         </div>
 
@@ -59,7 +59,7 @@ export default function Landing({ onStart }) {
             <h3 className="text-xl font-semibold mb-2">Smart Task Sync</h3>
             <p className="text-gray-400 text-sm">Organize priorities naturally with a gorgeous, keyboard-friendly interface.</p>
           </div>
-          
+
           <div className="bg-card p-6 rounded-2xl border border-gray-800 hover:border-gray-700 transition-colors">
             <div className="bg-purple-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 border border-purple-500/20">
               <BarChart3 className="w-6 h-6 text-purple-400" />
