@@ -6,10 +6,10 @@ export default function TaskList({
   handleCreateTask, toggleTaskStatus, deleteTask, taskInputRef
 }) {
   return (
-    <div className="bg-card p-8 rounded-2xl border border-gray-800 shadow-lg">
-      <h3 className="text-xl font-semibold mb-6">Today's Tasks</h3>
+    <div className="bg-card p-4 md:p-8 rounded-2xl border border-gray-800 shadow-lg">
+      <h3 className="text-xl font-semibold mb-4 md:mb-6">Today's Tasks</h3>
 
-      <form onSubmit={handleCreateTask} className="mb-6 flex gap-3">
+      <form onSubmit={handleCreateTask} className="mb-6 flex flex-col sm:flex-row gap-3">
         <input
           ref={taskInputRef}
           type="text"
@@ -27,7 +27,7 @@ export default function TaskList({
           <option value="MEDIUM">Med</option>
           <option value="HIGH">High</option>
         </select>
-        <button type="submit" className="bg-focus hover:bg-blue-600 px-6 py-3 rounded-lg flex items-center gap-2 font-medium transition-colors shadow-md active:scale-95">
+        <button type="submit" className="bg-focus hover:bg-blue-600 px-6 py-3 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors shadow-md active:scale-95 w-full sm:w-auto">
           <Plus className="w-5 h-5" /> Add
         </button>
       </form>

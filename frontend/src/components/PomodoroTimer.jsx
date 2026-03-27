@@ -6,7 +6,7 @@ export default function PomodoroTimer({
   workDuration, handleDurationChange, ambientSound, setAmbientSound, audioRef
 }) {
   return (
-    <div className="bg-card p-10 rounded-2xl border border-gray-800 flex flex-col items-center justify-center shadow-lg relative overflow-hidden text-center group">
+    <div className="bg-card p-6 md:p-10 pt-20 rounded-2xl border border-gray-800 flex flex-col items-center justify-center shadow-lg relative overflow-hidden text-center group">
       <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-focus to-purple-500"></div>
 
       <button
@@ -53,8 +53,8 @@ export default function PomodoroTimer({
         />
       </div>
 
-      <h3 className="text-gray-400 mb-6 mt-4 font-medium text-lg uppercase tracking-widest">Focus Session</h3>
-      <div className="text-8xl md:text-9xl font-light text-white mb-10 tabular-nums">
+      <h3 className="text-gray-400 mb-4 md:mb-6 mt-2 md:mt-4 font-medium text-base md:text-lg uppercase tracking-widest">Focus Session</h3>
+      <div className="text-7xl sm:text-8xl md:text-9xl font-light text-white mb-8 md:mb-10 tabular-nums">
         {formatTime(timer)}
       </div>
       <div className="flex justify-center gap-6">

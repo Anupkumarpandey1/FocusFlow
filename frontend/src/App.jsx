@@ -163,7 +163,7 @@ function App() {
       <main className="flex-1 flex flex-col h-screen overflow-hidden">
         <Header user={user} logout={logout} taskInputRef={taskInputRef} />
 
-        <div className="p-8 flex-1 overflow-y-auto w-full pb-20">
+        <div className="p-4 md:p-8 flex-1 overflow-y-auto w-full pb-20">
           {apiError && (
             <div className="max-w-7xl mx-auto mb-6 bg-red-500/10 border border-red-500/50 text-red-500 px-4 py-3 rounded-lg text-sm flex items-center justify-between">
               <span>{apiError}</span>
@@ -171,7 +171,7 @@ function App() {
             </div>
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-7xl mx-auto">
             {/* Left Column: Tasks & Timer */}
             <div className="lg:col-span-2 space-y-8">
               <PomodoroTimer 
