@@ -66,16 +66,20 @@ function App() {
     }
   };
 
+  // Audio playback loop separation
+  useEffect(() => {
+    if (!audioRef.current) return;
+    
+    if (isActive && ambientSound !== 'none') {
+      audioRef.current.play().catch(e => console.log('Audio play error:', e));
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isActive, ambientSound]);
+
   // Pomodoro Execution logic
   useEffect(() => {
     let interval = null;
-    if (isActive) {
-      if (audioRef.current && ambientSound !== 'none') {
-        audioRef.current.play().catch(e => console.log('Audio play error:', e));
-      }
-    } else {
-      if (audioRef.current) audioRef.current.pause();
-    }
 
     if (isActive && timer > 0) {
       interval = setInterval(() => setTimer(t => t - 1), 1000);

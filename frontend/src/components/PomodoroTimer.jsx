@@ -35,10 +35,7 @@ export default function PomodoroTimer({
         </select>
         <select
           value={ambientSound}
-          onChange={(e) => { 
-            setAmbientSound(e.target.value); 
-            if (e.target.value === 'none' && audioRef.current) audioRef.current.pause(); 
-          }}
+          onChange={(e) => setAmbientSound(e.target.value)}
           className="bg-darker text-gray-400 text-xs px-2 py-1 border border-gray-700 rounded-md focus:outline-none focus:border-focus cursor-pointer"
         >
           <option value="none">Silence 🤫</option>
@@ -48,7 +45,7 @@ export default function PomodoroTimer({
         <audio
           ref={audioRef}
           loop
-          src={ambientSound === 'rain' ? 'https://ia800806.us.archive.org/15/items/RainSounds10HoursAndNightThunderRainstorm/Rain%20Sounds%2010%20Hours%20%26%20Night%20Thunder%20%26%20Rainstorm.mp3' : 'https://ia903102.us.archive.org/3/items/Free_Ambient_Cafe_Chatter_Sound_Effect/Free_Ambient_Cafe_Chatter_Sound_Effect.mp3'}
+          src={ambientSound === 'rain' ? 'https://actions.google.com/sounds/v1/weather/rain_heavy_loud.ogg' : ambientSound === 'cafe' ? 'https://actions.google.com/sounds/v1/crowds/cafe_restaurant_medium_crowd.ogg' : ''}
           style={{ display: 'none' }}
         />
       </div>
